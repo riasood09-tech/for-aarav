@@ -515,8 +515,18 @@
       envelope.classList.remove("open");
     }
 
-    openBtn.addEventListener("click", openEnvelope);
-    seal.addEventListener("click", openEnvelope);
+    openBtn.addEventListener("click", () => {
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.6;
+  music.play().catch(err => console.log(err));
+  openEnvelope();
+});
+    seal.addEventListener("click", () => {
+  const music = document.getElementById("bgMusic");
+  music.volume = 0.6;
+  music.play().catch(err => console.log(err));
+  openEnvelope();
+});
     closeBtn.addEventListener("click", closeEnvelope);
 
     /* ---------- confetti (simple canvas) ---------- */
