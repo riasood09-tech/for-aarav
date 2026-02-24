@@ -496,7 +496,7 @@
     function openEnvelope(){
       if(envelope.classList.contains("open")) return;
       envelope.classList.add("open");
-      document.getElementById("bgMusic").play();
+      document.getElementById("bgMusic").play().catch(()=>{});
       const r = envelope.getBoundingClientRect();
       sparkleBurst(r.left + r.width/2, r.top + r.height/2);
       startConfetti(1400);
@@ -658,6 +658,6 @@
       if(Math.random() < 0.22) sparkleBurst(e.clientX, e.clientY);
     });
   </script>
-<audio id="bgMusic" src="Fall In Love.mp3" loop></audio>
+<audio id="bgMusic" src="fall_in_love.mp3" loop></audio>
 </body>
 </html>
